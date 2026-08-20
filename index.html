@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Root Academy | Phonics Classes</title>
+
+    <meta name="description"
+          content="Learning Root Academy - Phonics classes designed to develop strong reading, pronunciation and communication skills through structured learning.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #f8f7f3;
+            color: #17221d;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 7%;
+
+            background: rgba(248,247,243,0.88);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: #244b3a;
+        }
+
+        .logo span {
+            color: #d49a3a;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #25342d;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c98d32;
+        }
+
+        .nav-btn {
+            background: #244b3a;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 30px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            padding: 150px 7% 80px;
+
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 50px;
+
+            background:
+                radial-gradient(circle at 80% 20%, #f0dfbb 0%, transparent 30%),
+                #f8f7f3;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+
+            background: #e8efe9;
+            color: #244b3a;
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 6vw, 82px);
+            line-height: 1.02;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #c98d32;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #5e6862;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #244b3a;
+            color: white;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+            background: #17372a;
+        }
+
+        .secondary {
+            border: 1px solid #244b3a;
+            color: #244b3a;
+        }
+
+        .secondary:hover {
+            background: #244b3a;
+            color: white;
+        }
+
+        /* HERO CARD */
+
+        .hero-card {
+            position: relative;
+            min-height: 500px;
+
+            border-radius: 35px;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(36,75,58,0.95),
+                    rgba(54,103,78,0.75)
+                );
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 40px;
+
+            box-shadow: 0 25px 60px rgba(36,75,58,0.2);
+        }
+
+        .hero-card::before {
+            content: "A B C";
+            position: absolute;
+
+            font-family: 'Playfair Display', serif;
+            font-size: 130px;
+            font-weight: bold;
+
+            color: rgba(255,255,255,0.08);
+
+            top: 45px;
+            left: 30px;
+        }
+
+        .floating-card {
+            position: absolute;
+            top: 30px;
+            right: 25px;
+
+            background: white;
+            padding: 15px 20px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+            font-weight: 700;
+            color: #244b3a;
+        }
+
+        .hero-card-content {
+            position: relative;
+            color: white;
+        }
+
+        .hero-card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading small {
+            color: #c98d32;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5vw, 55px);
+            line-height: 1.1;
+            margin: 12px 0;
+        }
+
+        .section-heading p {
+            color: #68726c;
+        }
+
+        /* FEATURES */
+
+        .features {
+            background: #ffffff;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            padding: 35px;
+            border-radius: 25px;
+
+            background: #f8f7f3;
+
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #e9d5aa;
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #68726c;
+            font-size: 15px;
+        }
+
+        /* LEVELS */
+
+        .levels {
+            background: #244b3a;
+            color: white;
+        }
+
+        .levels .section-heading p {
+            color: #c7d2cb;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .level {
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.06);
+
+            transition: 0.3s;
+        }
+
+        .level:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-7px);
+        }
+
+        .level-number {
+            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+            color: #e1b35f;
+        }
+
+        .level h3 {
+            font-size: 23px;
+            margin: 10px 0;
+        }
+
+        .level p {
+            color: #d3ddd6;
+        }
+
+        .level ul {
+            margin-top: 20px;
+            padding-left: 18px;
+            color: #d3ddd6;
+        }
+
+        .level li {
+            margin-bottom: 7px;
+        }
+
+        /* TEACHING */
+
+        .teaching {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .teaching-box {
+            background: #ead9b8;
+            border-radius: 35px;
+            padding: 55px;
+            min-height: 400px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .teaching-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #244b3a;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* STUDY MATERIAL */
+
+        .materials {
+            background: white;
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .material {
+            height: 300px;
+            border-radius: 25px;
+
+            background: linear-gradient(135deg,#dfe9e1,#f1dfba);
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 25px;
+
+            overflow: hidden;
+            position: relative;
+
+            transition: 0.3s;
+        }
+
+        .material:hover {
+            transform: scale(1.02);
+        }
+
+        .material::before {
+            content: "📚";
+            position: absolute;
+
+            font-size: 100px;
+            top: 50px;
+            left: 50%;
+
+            transform: translateX(-50%);
+        }
+
+        .material:nth-child(2)::before {
+            content: "🔤";
+        }
+
+        .material:nth-child(3)::before {
+            content: "✏️";
+        }
+
+        .material-info {
+            position: relative;
+            background: rgba(255,255,255,0.9);
+
+            padding: 15px 18px;
+            border-radius: 15px;
+
+            width: 100%;
+        }
+
+        .material-info h3 {
+            font-size: 18px;
+        }
+
+        .material-info p {
+            font-size: 13px;
+            color: #68726c;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+
+            background:
+                radial-gradient(circle at center, #f0dfbb, transparent 60%),
+                #f8f7f3;
+        }
+
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px,5vw,60px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #68726c;
+            margin-bottom: 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #172d23;
+            color: white;
+
+            padding: 50px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        footer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+        }
+
+        footer p {
+            color: #b8c3bc;
+            font-size: 14px;
+            margin-top: 7px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 850px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 130px;
+            }
+
+            .hero-card {
+                min-height: 400px;
+            }
+
+            .feature-grid,
+            .level-grid,
+            .material-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teaching {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 6%;
+            }
+
+            .teaching-box {
+                padding: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        Learning <span>Root</span>
+    </div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#levels">Levels</a></li>
+        <li><a href="#materials">Study Material</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-btn">Enquire Now</a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div>
+
+        <div class="hero-tag">
+            PHONICS • READING • LANGUAGE SKILLS
+        </div>
+
+        <h1>
+            Build Strong
+            <span>Roots.</span>
+            Grow Confident.
+        </h1>
+
+        <p>
+            Welcome to <strong>Learning Root Academy</strong> —
+            where children learn phonics through structured,
+            engaging and skill-focused training.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#levels" class="btn primary">
+                Explore Our Levels
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Join Learning Root
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="floating-card">
+            🎯 Learn • Practice • Master
+        </div>
+
+        <div class="hero-card-content">
+
+            <h3>
+                Learning that grows with your child.
+            </h3>
+
+            <p>
+                From the first sound to confident reading,
+                we build every skill step-by-step.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT / FEATURES -->
+
+<section class="features" id="about">
+
+    <div class="section-heading">
+
+        <small>Why Learning Root?</small>
+
+        <h2>
+            More than classes.
+            A foundation for lifelong learning.
+        </h2>
+
+        <p>
+            Our approach combines strong teaching skills,
+            structured practice and carefully designed
+            learning material.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature">
+
+            <div class="icon">👩‍🏫</div>
+
+            <h3>High Teaching Skills</h3>
+
+            <p>
+                Focused and engaging teaching methods
+                help students understand concepts clearly
+                and develop confidence.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">🧠</div>
+
+            <h3>Concept-Based Learning</h3>
+
+            <p>
+                Students learn sounds, pronunciation,
+                blending and reading through systematic
+                practice.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">🌱</div>
+
+            <h3>Step-by-Step Growth</h3>
+
+            <p>
+                Our three-level structure allows students
+                to progress naturally from fundamentals
+                to advanced skills.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEVELS -->
+
+<section class="levels" id="levels">
+
+    <div class="section-heading">
+
+        <small>Our Learning Path</small>
+
+        <h2>
+            Three levels.
+            One strong foundation.
+        </h2>
+
+        <p>
+            Every student progresses through a carefully
+            structured learning journey.
+        </p>
+
+    </div>
+
+
+    <div class="level-grid">
+
+        <div class="level">
+
+            <div class="level-number">01</div>
+
+            <h3>Basic</h3>
+
+            <p>
+                Build the foundation of phonics and
+                understand the relationship between
+                letters and sounds.
+            </p>
+
+            <ul>
+                <li>Alphabet & sounds</li>
+                <li>Letter recognition</li>
+                <li>Basic pronunciation</li>
+                <li>Sound awareness</li>
+            </ul>
+
+        </div>
+
+
+        <div class="level">
+
+            <div class="level-number">02</div>
+
+            <h3>Intermediate</h3>
+
+            <p>
+                Strengthen reading abilities and begin
+                connecting individual sounds into words.
+            </p>
+
+            <ul>
+                <li>Blending sounds</li>
+                <li>Word formation</li>
+                <li>Reading practice</li>
+                <li>Pronunciation improvement</li>
+            </ul>
+
+        </div>
+
+
+        <div class="level">
+
+            <div class="level-number">03</div>
+
+            <h3>Master</h3>
+
+            <p>
+                Develop confident reading and advanced
+                phonics skills through continuous practice.
+            </p>
+
+            <ul>
+                <li>Advanced phonics</li>
+                <li>Fluent reading</li>
+                <li>Spelling skills</li>
+                <li>Confidence building</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TEACHING -->
+
+<section class="teaching">
+
+    <div>
+
+        <div class="section-heading">
+
+            <small>Our Teaching Approach</small>
+
+            <h2>
+                Teaching with patience,
+                practice & purpose.
+            </h2>
+
+            <p>
+                We believe every learner has their own pace.
+                Our teaching approach focuses on understanding
+                rather than simply memorising.
+            </p>
+
+        </div>
+
+
+        <ul class="check-list">
+
+            <li>Interactive classroom learning</li>
+
+            <li>Individual attention</li>
+
+            <li>Regular practice & revision</li>
+
+            <li>Pronunciation-focused training</li>
+
+            <li>Confidence-building activities</li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="teaching-box">
+
+        <h3>
+            Strong roots create strong readers.
+        </h3>
+
+        <p>
+            At Learning Root Academy, every lesson is
+            designed to make learning simple, engaging
+            and effective.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- STUDY MATERIAL -->
+
+<section class="materials" id="materials">
+
+    <div class="section-heading">
+
+        <small>Learning Resources</small>
+
+        <h2>
+            Learning material designed
+            for practice.
+        </h2>
+
+        <p>
+            Students receive access to structured learning
+            resources that support classroom learning and
+            practice at home.
+        </p>
+
+    </div>
+
+
+    <div class="material-grid">
+
+        <div class="material">
+
+            <div class="material-info">
+
+                <h3>Phonics Learning Books</h3>
+
+                <p>
+                    Structured material for systematic learning.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="material">
+
+            <div class="material-info">
+
+                <h3>Sound & Letter Cards</h3>
+
+                <p>
+                    Visual resources for quick and engaging practice.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="material">
+
+            <div class="material-info">
+
+                <h3>Practice Worksheets</h3>
+
+                <p>
+                    Activities designed to reinforce concepts.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+    <h2>
+        Ready to build a stronger foundation?
+    </h2>
+
+    <p>
+        Give your child the right start with
+        Learning Root Academy.
+    </p>
+
+    <!-- Replace the phone number below -->
+
+    <a href="tel:+919999999999" class="btn primary">
+        📞 Contact Us
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div>
+
+        <h3>Learning Root Academy</h3>
+
+        <p>
+            Phonics • Reading • Language Skills
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p>
+            © 2026 Learning Root Academy.
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
